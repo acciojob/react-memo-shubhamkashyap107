@@ -10,7 +10,7 @@ const App = () => {
 
     const memoizedTodoCount = useMemo(() => first.length, [first]);
   return (
-    <div>
+    <div id='main'>
         
         <h1>My Todos</h1>
 
@@ -23,7 +23,7 @@ const App = () => {
         </ul>
 
 
-        <button onClick={() => {
+        <button id='add-todo-btn' onClick={() => {
             setFirst([...first, "New Todo"])
         }}>Add Todo</button>
 
@@ -34,7 +34,7 @@ const App = () => {
 
 
         {count}
-        <button onClick={() => {
+        <button id='incr-cnt' onClick={() => {
             setCount(count + 1)
         }}>+</button>
 
@@ -43,7 +43,7 @@ const App = () => {
 
 
         <h1>React.memo</h1>
-        <input type='text' value={text} onChange={(e) => {
+        <input id='skill-input' type='text' value={text} onChange={(e) => {
             setText(e.target.value)
         }}/>
         <button onClick={() => {
